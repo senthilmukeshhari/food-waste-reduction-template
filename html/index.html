@@ -22,15 +22,21 @@
 	main{
 		width: 100vw;
 		height: 100vh;
+		display: flex;
+		justify-content: space-between;
 	}
 	.food-items-section{
 		display: flex;
-		flex-direction: column;
+		justify-content: space-evenly;
 		align-items: center;
     	max-height: 100vh; /* Adjust height as needed */
     	overflow-y: auto;
 	}
-	::web
+	#map{
+		max-height: 100vh;
+		overflow: hidden;
+	}
+
 </style>
 
 <body>
@@ -74,26 +80,89 @@
 	</header>
 
 	<main class='container-fluid row'>
-		<div id="map" class="col-0 col-md-8"></div>
+		<div id="map" class="col-0 col-md-6"></div>
 
-		<section class="col-12 col-md-4 food-items-section mt-4" id="food-items">
-			<div class="card my-2" style="width:100%;">
+		<section class="col-12 col-md-6 food-items-section row bg-warning" id="food-items-section">
+
+			<!-- Food Card -->
+			<div class="card my-2 col-md-5">
 			  <img src="../assets/food4.jpg" class="card-img-top" alt="...">
 			  <div class="card-body">
-			    <h5 class="card-title">Card title</h5>
-			    <p class="card-text">Some quick example text to build on the card title and make up the bulk of the card's content.</p>
+			    <h5 class="card-title"> -Food Name- </h5>
+			    <p class="card-text">
+			    	Some quick example text to build on the card title and make up the bulk of the card's content.
+			    </p>
 			    <a href="#" class="btn btn-primary w-100">Claim Food</a>
 			  </div>
 			</div>
+			<!-- End Food Card -->
 
-			<div class="card my-2">
+			<!-- Food Card -->
+			<div class="card my-2 col-md-5">
 			  <img src="../assets/food4.jpg" class="card-img-top" alt="...">
 			  <div class="card-body">
 			    <h5 class="card-title">Card title</h5>
-			    <p class="card-text">Some quick example text to build on the card title and make up the bulk of the card's content.</p>
+			    <p class="card-text">
+			    	Some quick example text to build on the card title and make up the bulk of the card's content.
+			    </p>
 			    <a href="#" class="btn btn-primary w-100">Claim Food</a>
 			  </div>
 			</div>
+			<!-- End Food Card -->
+
+			<!-- Food Card -->
+			<div class="card my-2 col-md-5">
+			  <img src="../assets/food4.jpg" class="card-img-top" alt="...">
+			  <div class="card-body">
+			    <h5 class="card-title"> -Food Name- </h5>
+			    <p class="card-text">
+			    	Some quick example text to build on the card title and make up the bulk of the card's content.
+			    </p>
+			    <a href="#" class="btn btn-primary w-100">Claim Food</a>
+			  </div>
+			</div>
+			<!-- End Food Card -->
+
+			<!-- Food Card -->
+			<div class="card my-2 col-md-5">
+			  <img src="../assets/food4.jpg" class="card-img-top" alt="...">
+			  <div class="card-body">
+			    <h5 class="card-title">Card title</h5>
+			    <p class="card-text">
+			    	Some quick example text to build on the card title and make up the bulk of the card's content.
+			    </p>
+			    <a href="#" class="btn btn-primary w-100">Claim Food</a>
+			  </div>
+			</div>
+			<!-- End Food Card -->
+
+			<!-- Food Card -->
+			<div class="card my-2 col-md-5">
+			  <img src="../assets/food4.jpg" class="card-img-top" alt="...">
+			  <div class="card-body">
+			    <h5 class="card-title"> -Food Name- </h5>
+			    <p class="card-text">
+			    	Some quick example text to build on the card title and make up the bulk of the card's content.
+			    </p>
+			    <a href="#" class="btn btn-primary w-100">Claim Food</a>
+			  </div>
+			</div>
+			<!-- End Food Card -->
+
+			<!-- Food Card -->
+			<div class="card my-2 col-md-5">
+			  <img src="../assets/food4.jpg" class="card-img-top" alt="...">
+			  <div class="card-body">
+			    <h5 class="card-title">Card title</h5>
+			    <p class="card-text">
+			    	Some quick example text to build on the card title and make up the bulk of the card's content.
+			    </p>
+			    <a href="#" class="btn btn-primary w-100">Claim Food</a>
+			  </div>
+			</div>
+			<!-- End Food Card -->
+
+
 		</section>
 	</main>
 
