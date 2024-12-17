@@ -73,7 +73,7 @@ function error(error) {
 
 navigator.geolocation.getCurrentPosition(success, error, {
 	enableHighAccuracy : true,
-	timeout : 1000,
+	timeout : 10000,
 	maximumAge : 0
 });
 
