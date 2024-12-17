@@ -14,7 +14,10 @@ L.tileLayer('https://{s}.tile.openstreetmap.org/{z}/{x}/{y}.png', {
 function success(position) {
 	const lat = position.coords.latitude;
 	const long = position.coords.longitude;
-	const accuracy = position.coords.accuracy;
+	const accuracy = 500;
+
+	console.log('Lat : ', lat);
+	console.log('Long : ', long);
 	
 	if(marker){
 		map.removeLayer(marker);
@@ -32,30 +35,30 @@ function success(position) {
 	map.setView([lat, long]);
 
 	// Create a custom control
-	var CustomButton = L.Control.extend({
-	  options: {
-	    position: 'bottomright' // Position of the button
-	  },
-	  onAdd: function (map) {
-	    // Create a button element
-	    var button = L.DomUtil.create('button', 'custom-button');
-	    button.innerHTML = "Click Me"; // Button text
-	    button.classList.add('btn')
-	    button.classList.add('btn-primary')
+	if (!document.querySelector('.custom-button')) {
+		var CustomButton = L.Control.extend({
+		  options: {
+		    position: 'bottomright' // Position of the button
+		  },
+		  onAdd: function (map) {
+		    // Create a button element
+		    var button = L.DomUtil.create('button', 'custom-button');
+		    button.innerHTML = "Click Me"; // Button text
+		    button.classList.add('btn')
+		    button.classList.add('btn-primary')
 
-	    // Attach a click event
-	    L.DomEvent.on(button, 'click', function () {
-	      	map.setView([lat, long]);
-	    });
+		    // Attach a click event
+		    L.DomEvent.on(button, 'click', function () {
+		      	map.setView([lat, long]);
+		    });
 
-	    return button;
-	  }
-	});
+		    return button;
+		  }
+		});
 
-	// Add the custom button to the map
-	console.log(map.CustomButton);
-	map.addControl(new CustomButton());
-	console.log(map.CustomButton);
+		// Add the custom button to the map
+		map.addControl(new CustomButton());
+	}
 	
 }
 
@@ -64,8 +67,26 @@ function error(error) {
 	if (error.code == 1) {
 		alert('Please allow the location permission.');
 	} else {
-		alert("Doesn't support locatino");
+		alert("Doesn't support locatinon.");
 	}
 }
 
-navigator.geolocation.watchPosition(success, error);
+navigator.geolocation.getCurrentPosition(success, error, {
+	enableHighAccuracy : true,
+	timeout : 1000,
+	maximumAge : 0
+});
+
+
+// fetch(`https://ipinfo.io/json?token=${API_KEY}`)
+// .then(res => res.json())
+// .then(data => {
+// 	console.log('Data : ', data)
+// 	var location = data.loc.split(',');
+// 	console.log('location : ', location)
+// 	const latitude = location[0];
+// 	const longitude = location[1];
+
+// 	marker = L.marker([latitude, longitude]).addTo(map);
+// 	circle = L.circle([latitude, longitude], { radius: 500 }).addTo(map);
+// })
