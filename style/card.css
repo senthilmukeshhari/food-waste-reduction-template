@@ -1,0 +1,8 @@
+.card{
+	background-color: var(--muted-beige-color);
+	padding: 0;
+}
+
+.card-body{
+	color: var(--text-primary) !important;
+}

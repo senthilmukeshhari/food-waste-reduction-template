@@ -43,9 +43,11 @@ function success(position) {
 		  onAdd: function (map) {
 		    // Create a button element
 		    var button = L.DomUtil.create('button', 'custom-button');
-		    button.innerHTML = "Click Me"; // Button text
+		    button.innerHTML = `<i class='fa-solid fa-location-crosshairs'></i>`;
+		    // button.innerHTML = `<i class='fa-solid fa-street-view'></i>`;
 		    button.classList.add('btn')
 		    button.classList.add('btn-primary')
+		    button.classList.add('rounded-circle')
 
 		    // Attach a click event
 		    L.DomEvent.on(button, 'click', function () {
@@ -73,8 +75,6 @@ function error(error) {
 
 navigator.geolocation.getCurrentPosition(success, error, {
 	enableHighAccuracy : true,
-	timeout : 1000,
-	maximumAge : 0
 });
 
 
