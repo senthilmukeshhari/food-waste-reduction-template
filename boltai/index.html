@@ -1,0 +1,84 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="css/main.css">
+    <link rel="stylesheet" href="css/map.css">
+    <link rel="stylesheet" href="https://unpkg.com/leaflet@1.9.4/dist/leaflet.css">
+    <title>Food4Neighbours</title>
+</head>
+<body>
+    <header>
+        <nav>
+            <div class="logo">
+                <h1>Food4Neighbours</h1>
+            </div>
+            <ul class="nav-links">
+                <li><a href="#" class="active">Home</a></li>
+                <li><a href="#">Claim</a></li>
+                <li><a href="#">Donate</a></li>
+                <li><a href="#">About Us</a></li>
+            </ul>
+            <div class="nav-icons">
+                <div class="notification">
+                    <span class="notification-count">0</span>
+                    <img src="https://api.iconify.design/mdi:bell.svg" alt="notifications">
+                </div>
+                <div class="profile">
+                    <img src="https://api.iconify.design/mdi:account-circle.svg" alt="profile">
+                </div>
+            </div>
+        </nav>
+    </header>
+
+    <main>
+        <section class="map-section">
+            <h2>Food Donations Near You</h2>
+            <div id="map"></div>
+        </section>
+
+        <section class="food-cards">
+            <h2>Available Foods</h2>
+            <div class="card-container">
+                <div class="food-card">
+                    <div class="food-image">
+                        <img src="https://images.unsplash.com/photo-1608198093002-ad4e005484ec" alt="Fresh Bread">
+                    </div>
+                    <div class="food-info">
+                        <h3>Fresh Bread</h3>
+                        <p>Fresh bread available for donation. Pick up within 2 hours.</p>
+                        <div class="location-time">
+                            <span class="location">📍 Madurai</span>
+                            <span class="time">🕐 12:00 PM</span>
+                        </div>
+                        <button class="claim-btn">Claim Now</button>
+                    </div>
+                </div>
+
+                <div class="food-card">
+                    <div class="food-image">
+                        <img src="https://images.unsplash.com/photo-1528735602780-2552fd46c7af" alt="Fruits">
+                    </div>
+                    <div class="food-info">
+                        <h3>Fresh Fruits</h3>
+                        <p>Assorted fruits available for donation. Must collect today.</p>
+                        <div class="location-time">
+                            <span class="location">📍 Madurai</span>
+                            <span class="time">🕐 1:30 PM</span>
+                        </div>
+                        <button class="claim-btn">Claim Now</button>
+                    </div>
+                </div>
+            </div>
+        </section>
+    </main>
+
+    <footer>
+        <p>&copy; 2024 Food4Neighbours. All rights reserved.</p>
+    </footer>
+
+    <script src="https://unpkg.com/leaflet@1.9.4/dist/leaflet.js"></script>
+    <script src="js/map.js"></script>
+</body>
+</html>
