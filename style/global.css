@@ -6,6 +6,7 @@
 	--text-primary: #4E342E;
 	--text-light: white;
 	--text-dark: black;
+    --shadow: rgba(0, 0, 0, 0.1);
 }
 
 *{
@@ -48,7 +49,7 @@ body{
 #created{
 	color: var(--medium-brown-color);
 }
-
+/*
 ::-webkit-scrollbar {
     display: block;
     width: 10px;
@@ -58,4 +59,4 @@ body{
 ::-webkit-scrollbar-thumb {
     background: var(--dark-brown-color);
     border-radius: 4px;
-  }
+  }*/
