@@ -49,14 +49,30 @@ body{
 #created{
 	color: var(--medium-brown-color);
 }
+
+.form-control:focus{
+	box-shadow: none;
+}
+
+i{
+	color: var(--text-light);
+}
+
 /*
 ::-webkit-scrollbar {
     display: block;
     width: 10px;
-    background-color: var(--muted-beige-color);
  }
 
 ::-webkit-scrollbar-thumb {
-    background: var(--dark-brown-color);
+    background: var(--medium-brown-color);
     border-radius: 4px;
   }*/
+
+::-webkit-scrollbar {
+	display: none;
+}
+
+::-webkit-scrollbar-thumb {
+	display: none;
+}

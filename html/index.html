@@ -98,6 +98,10 @@
 			gap: 10px;	
 		}
 
+		main{
+			padding-top: 7rem;
+		}
+
 		main.row{
 			margin: 0 !important;
 			justify-content: center;
@@ -112,12 +116,7 @@
 	@media (max-width: 767.98px) {
 
 		main{
-			padding-top: 110px;
-		}
-
-		main.row{
-			margin: 0 !important;
-			justify-content: center;
+			padding-top: 8.5rem;
 		}
 
 		#map{
@@ -146,7 +145,7 @@
 		    	<a class="navbar-brand" href="#">Food4neighbour's</a>
 		  	</div>
 
-		    <ul class="navbar-nav nav-menu order-2 order-md-1">
+		    <ul class="navbar-nav nav-menu order-2 order-md-2 order-lg-1">
 		        <li class="nav-item">
 		          <a class="nav-link" href="#">Home</a>
 		        </li>
@@ -160,13 +159,15 @@
 		          <a class="nav-link" href="#">AboutUs</a>
 		        </li>
 		    </ul>
-
-		    <ul class="navbar-nav navbar-icons order-1 order-md-2">
-		        <li class="nav-item">
-		          <a class="nav-link" aria-current="page" href="#">
+		    <!-- <div> -->
+		    <div class="navbar-nav order-3 order-lg-2">
+		        <div class="nav-item" id="search-group">
+		        	<input type="text" class="form-control" name="search-food" placeholder="Search foods..">
 		          	<i class="fa-solid fa-magnifying-glass"></i>
-		          </a>
-		        </li>
+		        </div>
+		    </div>
+
+		    <ul class="navbar-nav navbar-icons order-1 order-lg-3">
 		        <li class="nav-item">
 		          <a class="nav-link position-relative" href="#">
 		          	<p class="badge bg-danger rounded-circle" id="notification-count">0</p>
@@ -179,6 +180,7 @@
 		          </a>
 		        </li>
 		    </ul>
+		    <!-- </div> -->
 
 		  </div>
 		</nav>
