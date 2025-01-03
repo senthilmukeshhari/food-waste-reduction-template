@@ -26,7 +26,6 @@ function success(position) {
 
 	marker = L.marker([lat, long]).addTo(map);
 	circle = L.circle([lat, long], { radius: accuracy }).addTo(map);
-
 	
 	if(!zoomed){
 		zoomed = map.fitBounds(circle.getBounds());
